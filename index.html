@@ -1,0 +1,86 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>LABMAP</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+ <link rel="stylesheet" href="themes/blue/style.css" type="text/css" media="print, projection, screen" />
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>Labmap</h1>
+      <h2>BETA</h2>
+    </header>
+    <div id="main" role="main">
+      <div id="mapBox"></div>
+    </div>
+    <div style="font-size: 8pt; padding-left: 12px">
+      NOTE: no guarantees, data should be accurate to a couple of minutes
+    </div>
+    <footer>
+      <table id="userTable" class="tablesorter"> 
+      <thead> 
+      <tr> 
+	  <th>Hostname</th> 
+	  <th>User name</th> 
+	  <th>Full name</th> 
+      </tr> 
+      </thead> 
+      <tbody> 
+      <tr> 
+	  <td>Loading...</td> 
+      </tr> 
+      </tbody> 
+      </table>       
+    </div>
+  </div> <!--! end of #container -->
+
+  <script type="text/javascript" src="js/SVGPan.js" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <style type="text/css">@import "jquery.svg.css";</style> 
+  <script type="text/javascript" src="jquery.svg.js"></script>
+
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <!-- end scripts-->
+
+
+  <script> // Change UA-XXXXX-X to be your site's ID
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
