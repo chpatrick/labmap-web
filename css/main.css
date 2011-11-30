@@ -37,11 +37,16 @@ header {
 
 #user_list{
     padding-left: 680px;
+    padding-bottom:20px;
 }
 
 #user_table{
     width: 100%;
     min-width: 250px;
+}
+
+#pager{
+    padding-left: 680px;
 }
 
 footer {

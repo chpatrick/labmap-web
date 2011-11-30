@@ -28,57 +28,74 @@
         <header>
             <div class="center_content">
                 <h1>Labmap<sup>BETA</sup></h1>
-            </header>
-
-            <div id="main" role="main" class="center_content">
-                <div id="lab_map"></div>
-
-                <div id="user_list">
-                    <p>
-                        NOTE: no guarantees, data should be accurate to a couple of minutes
-                    </p>
-                    <table id="user_table" class="tablesorter"> 
-                        <thead> 
-                            <tr> 
-                                <th>Hostname</th> 
-                                <th>User name</th> 
-                                <th>Full name</th> 
-                            </tr> 
-                        </thead> 
-                        <tbody> 
-                            <tr> 
-                                <td>Loading...</td> 
-                            </tr> 
-                        </tbody> 
-                    </table>  
-                </div>
             </div>
+        </header>
 
-            <footer>
-
-            </footer>
+        <div id="main" role="main" class="center_content">
+            <div id="lab_map"></div>
+            <div id="user_list">
+                <p>
+                    NOTE: no guarantees, data should be accurate to a couple of minutes
+                </p>
+                <table id="user_table" class="tablesorter"> 
+                    <thead> 
+                        <tr> 
+                            <th>Hostname</th> 
+                            <th>User name</th> 
+                            <th>Full name</th> 
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr> 
+                            <td>Loading...</td> 
+                        </tr> 
+                    </tbody> 
+                </table>  
+            </div>
+            
+            <div id="pager" class="pager">
+                <form>
+                    <img src="../images/first.png" class="first"/>
+                    <img src="./images/prev.png" class="prev"/>
+                    <input type="text" class="pagedisplay"/>
+                    <img src="./images/next.png" class="next"/>
+                    <img src="./images/last.png" class="last"/>
+                    <select class="pagesize">
+                        <option selected="selected"  value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option  value="40">40</option>
+                    </select>
+                </form>
+            </div>
         </div>
 
-        <!-- scripts -->
-        <!-- JQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+        <footer>
 
-        <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
-        <script defer src="js/libs/plugins.js"></script>
+        </footer>
+    </div>
 
-        <!-- Table Sorter Plugin -->
-        <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
+    <!-- scripts -->
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
-        <!-- Main Script for LabMap -->
-        <script defer src="js/main.js"></script>
-        <!-- end scripts-->
+    <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
+    <script defer src="js/libs/plugins.js"></script>
+
+    <!-- Table Sorter Plugin -->
+    <script type="text/javascript" src="js/libs/jquery.tablesorter.pager.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
+
+    <!-- Main Script for LabMap -->
+    <script defer src="js/main.js"></script>
+    <!-- end scripts-->
 
 
-        <!--[if lt IE 7 ]>
-        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-        <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-        <![endif]-->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
 
-    </body>
-    </html>
+</body>
+</html>
