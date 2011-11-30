@@ -4,7 +4,9 @@
 
 $(document).ready(function() {
   $('#lab_map').svg({loadURL: "labmap.svg", onLoad: loaded});
-  $('#userTable').tablesorter();
+  $('#user_table').tablesorter({ 
+        sortList: [[0,0]] 
+    }); 
 });
 
 xlink = "http://www.w3.org/1999/xlink";
@@ -17,7 +19,7 @@ function loaded(svg) {
 function updateMap(svg) { 
 
   $.getJSON('../labmap.json', function(data) {
-    $('#userTable > tbody').empty()
+    $('#user_table > tbody').empty()
 
     $.each(data, function(host, info) {
       var image = $('#' + host, svg.root()).get(0);
@@ -25,7 +27,7 @@ function updateMap(svg) {
 
       if (image) {
         if (info) {
-	  $('#userTable > tbody').append('<tr><td>' + host + '</td><td>' + info.username + '</td><td>' + info.fullname + '</td></tr>')
+	  $('#user_table > tbody').append('<tr><td>' + host + '</td><td>' + info.username + '</td><td>' + info.fullname + '</td></tr>')
 	  
 	  image.setAttributeNS(xlink, 'href', info.image); 
 
