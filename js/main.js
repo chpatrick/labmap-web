@@ -58,7 +58,7 @@ function updateTable(){
 
     $.each(labmap.machines, function(index, m){
         m.tableRow = $(document.createElement('tr'));
-        m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.fullname + ' ' + m.user.last_name + '</td>');
+        m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.first_name + ' ' + m.user.last_name + '</td>');
 
         newTBody.append(m.tableRow);
     });
@@ -86,13 +86,20 @@ function updateMap(){
                 var title = m.mapElement.attr('title');
 
                 if (!title) {
-                    m.mapElement.attr('title', m.machinename + ': ' + m.user.fullname + ' (' + m.user.username + ')');
+                    m.mapElement.attr('title', m.machinename + ': ' + m.user.first_name + ' ' + m.user.last_name + ' (' + m.user.username + ')');
                 }
             }else{
                 m.mapImage.hide();
             }
         }
     });
+}
+
+function showUserDataForMachine(m){
+    $("#user_info_image").attr('src', m.user.imageURL);
+    $("#user_info_name").html(m.user.first_name + ' ' + m.user.last_name);
+    $("#user_info_username").html(m.user.username);
+    $("#user_info_machine").html(m.machinename);
 }
 
 

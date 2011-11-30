@@ -47,7 +47,6 @@ header {
     left: 335px;
     background-color: #EEE;
     padding: 10px;
-    height: 152px;
     width: 288px;
 }
 
@@ -55,12 +54,12 @@ header {
     text-align: right;
     font-weight: bold;
 }
-#user_image{
+#user_info_image{
     float: left;
     width: 100px;
-    height: 120px;
+    height: 133px;
     background-color: #FF0000;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 #user_info_title{
