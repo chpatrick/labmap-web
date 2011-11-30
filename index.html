@@ -24,48 +24,54 @@
 
 <body>
 
-    <div id="container">
+    <div id="wrapper">
         <header>
-            <h1>Labmap</h1>
-            <h2>BETA</h2>
+            <div class="center_content">
+            <h1>Labmap<sup>BETA</sup></h1>
         </header>
-        <div id="main" role="main">
+
+        <div id="main" role="main" class="center_content">
             <div id="mapBox"></div>
+            <div style="font-size: 8pt; padding-left: 12px">
+                NOTE: no guarantees, data should be accurate to a couple of minutes
+            </div>
+
+            <div id="user_list">
+                <table id="userTable" class="tablesorter"> 
+                    <thead> 
+                        <tr> 
+                            <th>Hostname</th> 
+                            <th>User name</th> 
+                            <th>Full name</th> 
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr> 
+                            <td>Loading...</td> 
+                        </tr> 
+                    </tbody> 
+                </table>  
+            </div>
         </div>
-        <div style="font-size: 8pt; padding-left: 12px">
-            NOTE: no guarantees, data should be accurate to a couple of minutes
-        </div>
+
         <footer>
-            <table id="userTable" class="tablesorter"> 
-                <thead> 
-                    <tr> 
-                        <th>Hostname</th> 
-                        <th>User name</th> 
-                        <th>Full name</th> 
-                    </tr> 
-                </thead> 
-                <tbody> 
-                    <tr> 
-                        <td>Loading...</td> 
-                    </tr> 
-                </tbody> 
-            </table>       
-        <footer>
+
+        </footer>
     </div>
 
     <!-- scripts -->
-        <!-- JQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-        
-        <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
-        <script defer src="js/libs/plugins.js"></script>
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
-        <!-- Table Sorter Plugin -->
-        <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
+    <script defer src="js/libs/plugins.js"></script>
 
-        <!-- Main Script for LabMap -->
-        <script defer src="js/main.js"></script>
+    <!-- Table Sorter Plugin -->
+    <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
+
+    <!-- Main Script for LabMap -->
+    <script defer src="js/main.js"></script>
     <!-- end scripts-->
 
 
