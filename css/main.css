@@ -31,6 +31,7 @@ header {
   height: 520px;
   
   float: left;
+  position: relative;
 }
 
 #lab_map{
@@ -38,6 +39,34 @@ header {
   height: 520px;
   margin: 5px 0 5px 0;
   overflow: hidden;
+}
+
+#user_info{
+    position: absolute;
+    top: 288px;
+    left: 335px;
+    background-color: #EEE;
+    padding: 10px;
+    height: 152px;
+    width: 288px;
+}
+
+#user_info td.label{
+    text-align: right;
+    font-weight: bold;
+}
+#user_image{
+    float: left;
+    width: 100px;
+    height: 120px;
+    background-color: #FF0000;
+    margin-right: 15px;
+}
+
+#user_info_title{
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #user_list{
