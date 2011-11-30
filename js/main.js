@@ -1,52 +1,99 @@
-/* Author: 
+/* Use labmap namespace */
+labmap = {}
+labmap.svgmap = null;
+labmap.machines = [];
 
-*/
-
-$(document).ready(function() {
-    $('#lab_map').svg({loadURL: "labmap.svg", onLoad: loaded});
-});
-
-xlink = "http://www.w3.org/1999/xlink";
-
-function loaded(svg) {
-    updateMap(svg);
-    setInterval(function() { updateMap(svg); }, 10000);
+function User(username, full_name, imageURL){
+    var name = full_name.split(" ");
+    
+    return {
+        username : username,
+        first_name : name[0],
+        last_name : name[1],
+        imageURL : imageURL
+    }
+}
+function Machine(machine_name, user){
+    return {
+        machinename : machine_name,
+        user : user,
+        tableRow : null,
+        mapImage : null,
+        mapElement : null
+    }
 }
 
-function updateMap(svg) { 
+$(document).ready(function() {
+    $('#lab_map').svg({
+        loadURL: "labmap.svg",
+        onLoad: function(svg){
+            console.log(svg);
+            labmap.svgmap = svg;
+            reloadLabMapData();
+            setInterval(function() { reloadLabMapData(); }, 10000);
+        }
+    });
+});
 
+function reloadLabMapData(svg) {
+    var machines = []
+    var u = null;
+    var m = null;
     $.getJSON('../labmap.json', function(data) {
-        $('#user_table > tbody').empty()
-
-        $.each(data, function(host, info) {
-            var image = $('#' + host, svg.root()).get(0);
-
-
-            if (image) {
-                if (info) {
-                    $('#user_table > tbody').append('<tr><td>' + host + '</td><td>' + info.username + '</td><td>' + info.fullname + '</td></tr>')
-
-                    image.setAttributeNS(xlink, 'href', info.image); 
-
-                    var titleString = host + ': ' + info.fullname + ' (' + info.username + ')';
-                    var title = image.firstChild;
-                    if (title) { title.innerHTML = titleString; }
-                    else { svg.title(image, titleString); }
-                }
-                else {
-                    image.setAttribute('visibility', 'hidden')
-                }
-            }
+        $.each(data, function(host, user) {
+            u = User(user.username, user.fullname, user.image);
+            m = Machine(host, u);
+            machines.push(m);
         });
-        
-        // Rebind table sorter and pager objects
-        $('#user_table')
-            .tablesorter({ debug: true, widthFixed: true, sortList: [[0,0]] })
-            .tablesorterPager({offset: 20, size:18, container: $("#pager")});
+
+        console.log(machines);
+        labmap.machines = machines; //Replace listing
+        updateTable();
+        updateMap();
     });
 }
 
+function updateTable(){
+    var newTBody = $(document.createElement('tbody'));
 
+    $.each(labmap.machines, function(index, m){
+        m.tableRow = $(document.createElement('tr'));
+        m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.fullname + ' ' + m.user.last_name + '</td>');
+
+        newTBody.append(m.tableRow);
+    });
+
+    $('#user_table > tbody').replaceWith(newTBody);
+
+    // Rebind table sorter and pager objects
+    //TODO: might not be needed?
+    $('#user_table')
+    .tablesorter({ debug: true, widthFixed: true, sortList: [[0,0]] })
+    .tablesorterPager({offset: 20, size:18, container: $("#pager")});
+}
+
+function updateMap(){
+    var image = null;
+    var xlink = "http://www.w3.org/1999/xlink";
+
+    $.each(labmap.machines, function(index, m){
+        m.mapElement = $('#' + m.machinename);
+        m.mapImage = $(m.mapElement, labmap.svgmap.root()).get(0);
+
+        if(m.mapImage){
+            if(m.user){
+                m.mapImage.setAttributeNS(xlink, 'href', m.user.imageURL);
+                var title = m.mapElement.attr('title');
+
+                if (!title) {
+                    m.mapElement.attr('title', m.machinename + ': ' + m.user.fullname + ' (' + m.user.username + ')');
+                }
+            }else{
+                m.mapImage.hide();
+            }
+        }
+    });
+}
 
 
 
