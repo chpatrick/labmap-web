@@ -27,58 +27,58 @@
     <div id="wrapper">
         <header>
             <div class="center_content">
-            <h1>Labmap<sup>BETA</sup></h1>
-        </header>
+                <h1>Labmap<sup>BETA</sup></h1>
+            </header>
 
-        <div id="main" role="main" class="center_content">
-            <div id="lab_map"></div>
-            <p>
-                NOTE: no guarantees, data should be accurate to a couple of minutes
-            </p>
+            <div id="main" role="main" class="center_content">
+                <div id="lab_map"></div>
+                <p>
+                    NOTE: no guarantees, data should be accurate to a couple of minutes
+                </p>
 
-            <div id="user_list">
-                <table id="userTable" class="tablesorter"> 
-                    <thead> 
-                        <tr> 
-                            <th>Hostname</th> 
-                            <th>User name</th> 
-                            <th>Full name</th> 
-                        </tr> 
-                    </thead> 
-                    <tbody> 
-                        <tr> 
-                            <td>Loading...</td> 
-                        </tr> 
-                    </tbody> 
-                </table>  
+                <div id="user_list">
+                    <table id="userTable" class="tablesorter"> 
+                        <thead> 
+                            <tr> 
+                                <th>Hostname</th> 
+                                <th>User name</th> 
+                                <th>Full name</th> 
+                            </tr> 
+                        </thead> 
+                        <tbody> 
+                            <tr> 
+                                <td>Loading...</td> 
+                            </tr> 
+                        </tbody> 
+                    </table>  
+                </div>
             </div>
+
+            <footer>
+
+            </footer>
         </div>
 
-        <footer>
+        <!-- scripts -->
+        <!-- JQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
-        </footer>
-    </div>
+        <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
+        <script defer src="js/libs/plugins.js"></script>
 
-    <!-- scripts -->
-    <!-- JQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+        <!-- Table Sorter Plugin -->
+        <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
 
-    <script type="text/javascript" src="js/libs/jquery.svg.js"></script>
-    <script defer src="js/libs/plugins.js"></script>
-
-    <!-- Table Sorter Plugin -->
-    <script type="text/javascript" src="js/libs/jquery.tablesorter.min.js"></script>
-
-    <!-- Main Script for LabMap -->
-    <script defer src="js/main.js"></script>
-    <!-- end scripts-->
+        <!-- Main Script for LabMap -->
+        <script defer src="js/main.js"></script>
+        <!-- end scripts-->
 
 
-    <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-    <![endif]-->
+        <!--[if lt IE 7 ]>
+        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+        <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+        <![endif]-->
 
-</body>
-</html>
+    </body>
+    </html>
