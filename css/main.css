@@ -26,13 +26,18 @@ header {
     margin: 0 auto;
 }
 
-#lab_map {
+#lab_map_container {
+  width: 650px;
+  height: 520px;
+  
+  float: left;
+}
+
+#lab_map{
   width: 650px;
   height: 520px;
   margin: 5px 0 5px 0;
   overflow: hidden;
-  
-  float: left;
 }
 
 #user_list{
