@@ -55,22 +55,27 @@ function reloadLabMapData(svg) {
 }
 
 function updateTable(){
+    var newT = $(document.createElement('table'));
+    var newTHead = $(document.createElement('thead'));
+    newTHead.append('<tr><th>Hostname</th><th>User name</th><th>Full name</th></tr> ')
     var newTBody = $(document.createElement('tbody'));
-
+    
     $.each(labmap.machines, function(index, m){
         m.tableRow = $(document.createElement('tr'));
         m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.first_name + ' ' + m.user.last_name + '</td>');
 
         newTBody.append(m.tableRow);
     });
-
-    $('#user_table > tbody').replaceWith(newTBody);
-
+    
+    newT.append(newTHead).append(newTBody);
+    $('#user_table').replaceWith(newT); //wipes all dom and javascript bindings
+    newT.attr('id','user_table').addClass('tablesorter'); //Redo the id
+    
     // Rebind table sorter and pager objects
     //TODO: might not be needed?
-    $('#user_table')
-    .tablesorter({ debug: true, widthFixed: true, sortList: [[0,0]] })
-    .tablesorterPager({offset: 20, size:18, container: $("#pager")});
+    $(newT)
+        .tablesorter({ debug: true, widthFixed: true})
+        .tablesorterPager({offset: 20, size:18, container: $("#pager")});
 }
 
 function updateMap(){
