@@ -42,7 +42,7 @@ function updateMap(svg) {
         // Rebind table sorter and pager objects
         $('#user_table')
             .tablesorter({ debug: true, widthFixed: true, sortList: [[0,0]] })
-            .tablesorterPager({container: $("#pager")});
+            .tablesorterPager({offset: 20, container: $("#pager")});
     });
 }
 
