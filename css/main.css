@@ -78,8 +78,21 @@ header {
     min-width: 250px;
 }
 
+#user_table tr.clickable:hover td{
+    background-color: #D1F1FF;
+}
+
+
+#user_table tr.clickable{
+    background-color: #D1F1FF;
+}
+
 #pager{
     padding-left: 680px;
+}
+
+.clickable{
+    cursor: pointer;
 }
 
 footer {

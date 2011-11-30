@@ -50,6 +50,7 @@ function reloadLabMapData(svg) {
         labmap.machines = machines; //Replace listing
         updateTable();
         updateMap();
+        setupListenersForMachines();
     });
 }
 
@@ -92,6 +93,20 @@ function updateMap(){
                 m.mapImage.hide();
             }
         }
+    });
+}
+
+function setupListenersForMachines(){
+    $.each(labmap.machines, function(index, m){
+        m.mapElement.addClass('clickable');
+        m.mapElement.click(function(){
+            showUserDataForMachine(m);
+        });
+        
+        m.tableRow.addClass('clickable');
+        m.tableRow.click(function(){
+            showUserDataForMachine(m);
+        });
     });
 }
 
