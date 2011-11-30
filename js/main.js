@@ -39,7 +39,7 @@ function reloadLabMapData(svg) {
     var machines = []
     var u = null;
     var m = null;
-    $.getJSON('../labmap.json', function(data) {
+    $.getJSON('labmap.json', function(data) {
         $.each(data, function(host, user) {
             u = User(user.username, user.fullname, user.image);
             m = Machine(host, u);
