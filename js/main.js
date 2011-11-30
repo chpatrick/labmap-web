@@ -3,7 +3,7 @@
 */
 
 $(document).ready(function() {
-  $('#mapBox').svg({loadURL: "labmap.svg", onLoad: loaded});
+  $('#lab_map').svg({loadURL: "labmap.svg", onLoad: loaded});
   $('#userTable').tablesorter();
 });
 

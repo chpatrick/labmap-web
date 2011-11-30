@@ -25,10 +25,15 @@ header {
     margin: 0 auto;
 }
 
-#mapBox {
-  width: 100%;
+#lab_map {
+  width: ;
   height: 40em;
   margin: 5px 0 5px 0;
+}
+
+#labmap_svg{
+    width: 100%;
+    height: 100%;
 }
 
 footer {
