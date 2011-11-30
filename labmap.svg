@@ -26,9 +26,6 @@ image/svg+xml</dc:format>
 		</rdf:RDF>
 	</metadata>
 	<g id="viewport">
-		<g id="baseLayer" style="display: none" transform="translate(-58.089,-40.699485)">
-			<image clip-path="url(#clipPath3690)" height="1128.5621" id="image2886" transform="matrix(0.99985247,-0.01717653,0.01717653,0.99985247,-6.3330274,7.2767581)" width="787.42859" x="26.285711" xlink:href="file:///homes/pc2210/d/projects/labmap/base.tif" y="29.505047" />
-		</g>
 		<g id="layer2" style="display: inline" transform="translate(-58.089,-40.699485)">
 			<path d="m 171.726,97.770684 l 0,453.555496 M 58.589,699.81894 l 83.84251,0 l 0,-148.79676 l 61.6193,0.304 l 169.70563,3.4e-4 l 0,-246.47722 l 327.28943,0 l 0,-211.121883 l -175.76655,0 l 0,-52.527932 l -220.21325,0 l 0,56.568542 l -133.34007,0 l -7e-5,-51.51778 l -113.13693,0 l 0,653.568693 z" id="path4185" style="fill: url(#linearGradient5769); fill-opacity: 1; stroke: #000000; stroke-width: 1px; stroke-opacity: 1; stroke-linecap: butt; stroke-linejoin: miter" />
 			<path d="m 0.56942874,311.12906 l 113.03160126,0" id="path5670" style="fill: none; stroke: #000000; stroke-width: 1px; stroke-opacity: 1; stroke-linecap: butt; stroke-linejoin: miter" transform="translate(58.089,40.699485)" />
