@@ -128,9 +128,9 @@ function setupListenersForMachines(){
 
 function showUserDataForMachine(m){
     $("#user_info_image").attr('src', m.user.imageURL);
-    $("#user_info_name").html(m.user.first_name + ' ' + m.user.last_name);
-    $("#user_info_username").html(m.user.username);
-    $("#user_info_machine").html(m.machinename);
+    $("#user_info_name").html('<a href="https://teachdb.doc.ic.ac.uk/db/viewtab?table=vPeople&arg0=' + m.user.username + '">' + m.user.first_name + ' ' + m.user.last_name + '</a>');
+    $("#user_info_username").html('<a href="mailto://' + m.user.username + '@ic.ac.uk">' + m.user.username + '</a>');
+    $("#user_info_machine").html('<a href="ssh://' + m.machinename + '.doc.ic.ac.uk">' + m.machinename + '</a>');
 }
 
 
