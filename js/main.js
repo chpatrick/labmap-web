@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
 });
 
-function reloadLabMapData(svg) {
+function reloadLabMapData() {
     if(!labmap.working) return;
     
     var machines = []
