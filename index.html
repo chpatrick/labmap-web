@@ -35,6 +35,36 @@
         <div id="main" role="main" class="center_content">
             <div id="lab_map_container">
                 <div id="lab_map"></div>
+            </div>
+            <div id="user_list">
+                <table id="user_table" class="tablesorter"> 
+                    <thead> 
+                        <tr> 
+                            <th>Hostname</th> 
+                            <th>User name</th> 
+                            <th>Full name</th> 
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr> 
+                            <td>Loading...</td> 
+                        </tr> 
+                    </tbody> 
+                </table>  
+		<div id="pager" class="pager">
+		    <form>
+			<img src="images/first.png" class="first"/>
+			<img src="images/prev.png" class="prev"/>
+			<input type="text" class="pagedisplay" disabled/>
+			<img src="images/next.png" class="next"/>
+			<img src="images/last.png" class="last"/>
+			
+			<!-- bit of a hack -->
+			<select class="pagesize" style="display: none;">
+			    <option selected="selected"  value="18"></option>
+			</select>
+		    </form>
+		</div>
                 <div id="user_info">
                     <div id="user_info_title">User Info</div>
                     <div id="user_info_image_container">
@@ -53,44 +83,10 @@
                     </table>
                 </div>
             </div>
-            <div id="user_list">
-                <p>
-                    NOTE: no guarantees, data should be accurate to a couple of minutes
-                </p>
-                <table id="user_table" class="tablesorter"> 
-                    <thead> 
-                        <tr> 
-                            <th>Hostname</th> 
-                            <th>User name</th> 
-                            <th>Full name</th> 
-                        </tr> 
-                    </thead> 
-                    <tbody> 
-                        <tr> 
-                            <td>Loading...</td> 
-                        </tr> 
-                    </tbody> 
-                </table>  
-            </div>
-            
-            <div id="pager" class="pager">
-                <form>
-                    <img src="images/first.png" class="first"/>
-                    <img src="images/prev.png" class="prev"/>
-                    <input type="text" class="pagedisplay" disabled/>
-                    <img src="images/next.png" class="next"/>
-                    <img src="images/last.png" class="last"/>
-                    
-                    <!-- bit of a hack -->
-                    <select class="pagesize" style="display: none;">
-                        <option selected="selected"  value="18"></option>
-                    </select>
-                </form>
-            </div>
         </div>
 
         <footer>
-
+		by Patrick Chilton and Peter Hamilton :: <a href="https://github.com/vahokif/labmap-web">github</a> :: <a href="https://www.doc.ic.ac.uk/~pc2210/labmap/labmap.json">data feed</a> :: no guarantees, data should be accurate to a couple of minutes
         </footer>
     </div>
 

@@ -6,7 +6,12 @@ sup{
     font-size: 0.5em;
 }
 
+#wrapper {
+  height:auto;
+}
+
 #container {
+  min-height: 100%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -27,33 +32,50 @@ header {
 }
 
 #lab_map_container {
-  width: 650px;
-  height: 520px;
+  width: 60%;
+/*  min-height: 90%; */
   
+  height: 90%;
   float: left;
-  position: relative;
 }
 
 #lab_map{
-  width: 650px;
-  height: 520px;
+  height: 100%;
+  width: 100%;
   margin: 5px 0 5px 0;
   overflow: hidden;
 }
 
+/* svg { position:absolute; top:0; left:0; height:100%; width:100% } */
+
+footer {
+	clear: both;
+	position: absolute;
+	bottom: 0;
+}
+
+footer a {
+	color: black;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+footer a:visited {
+	color: gray;
+}
+
 #user_info{
-    position: absolute;
-    top: 288px;
-    left: 335px;
-    background-color: #EEE;
-    padding: 10px;
-    width: 288px;
+  margin-top: 10px;
 }
 
 #user_info td.label{
     text-align: right;
     font-weight: bold;
 }
+
 #user_info_image{
     float: left;
     width: 100px;
@@ -68,8 +90,9 @@ header {
 }
 
 #user_list{
-    padding-left: 680px;
+    width: 40%;
     padding-bottom:20px;
+    float: right;
 }
 
 #user_table{
@@ -87,7 +110,6 @@ header {
 }
 
 #pager{
-    padding-left: 680px;
 }
 
 .clickable{
@@ -95,7 +117,7 @@ header {
 }
 
 footer {
-  padding: 10px;
+  padding: 5px;
 }
 
 h1 {

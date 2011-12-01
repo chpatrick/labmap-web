@@ -87,7 +87,8 @@ function updateTable(){
     //TODO: might not be needed?
     $(newT)
         .tablesorter({ debug: true, widthFixed: true})
-        .tablesorterPager({offset: 20, size:18, container: $("#pager")});
+//        .tablesorterPager({offset: 20, size:18, container: $("#pager")});
+        .tablesorterPager({positionFixed:false, size:18, container: $("#pager")});
 }
 
 function updateMap(){
