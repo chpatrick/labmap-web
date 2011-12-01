@@ -45,10 +45,10 @@ function reloadLabMapData() {
     $.getJSON('labmap.json', function(data) {
         if(data.closed){
             labmap.working = false;
-            jQuery.facebox('It seems the computing labs are closed right now. Please check back later.');
+            jQuery.facebox('Lab''s closed, get some sleep. :)');
         }else if(data.stopped){
             labmap.working = false;
-            jQuery.facebox('It seems the labmap server isn\'t running right now. Please check back later.');
+            jQuery.facebox('Nothing to see here, move along.');
         }else{
             $.each(data, function(host, user) {
                 u = User(user.username, user.fullname, user.image);
