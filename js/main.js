@@ -45,7 +45,7 @@ function reloadLabMapData() {
     $.getJSON('labmap.json', function(data) {
         if(data.closed){
             labmap.working = false;
-            jQuery.facebox('Lab''s closed, get some sleep. :)');
+            jQuery.facebox('Lab\'s closed, get some sleep. :)');
         }else if(data.stopped){
             labmap.working = false;
             jQuery.facebox('Nothing to see here, move along.');
