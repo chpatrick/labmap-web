@@ -86,9 +86,9 @@ function updateTable(){
     // Rebind table sorter and pager objects
     //TODO: might not be needed?
     $(newT)
-        .tablesorter({ debug: true, widthFixed: true})
+        .tablesorter({ debug: true, widthFixed: true});
 //        .tablesorterPager({offset: 20, size:18, container: $("#pager")});
-        .tablesorterPager({positionFixed:false, size:18, container: $("#pager")});
+//        .tablesorterPager({positionFixed:false, size:18, container: $("#pager")});
 }
 
 function updateMap(){
