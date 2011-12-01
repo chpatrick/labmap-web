@@ -2,8 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg
 id="lab_map_svg"
-height="520px"
-width="645px"
+viewBox="0 0 700 700"
 style="display: inline" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs id="defs4">
 		<linearGradient id="linearGradient5763">
@@ -210,7 +209,7 @@ image/svg+xml</dc:format>
 			<image height="32" id="visual20" width="16" x="399.91211" y="193.89154" />
 			<image height="32" id="visual21" width="16" x="393.03634" y="178.1596" />
 			<image height="32" id="visual22" width="16" x="372.0987" y="149.57167" />
-			<image height="32" id="visual23" width="16" x="740.92328" y="302.66128" />
+			<image height="32" id="visual23" width="16" x="364" y="140" />
 			<image height="32" id="ray01" width="16" x="349.95312" y="127.82874" />
 			<image height="32" id="ray02" width="16" x="337.66017" y="118.41486" />
 			<image height="32" id="ray03" width="16" x="324.40643" y="110.40336" />
