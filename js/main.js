@@ -2,6 +2,7 @@
 labmap = {}
 labmap.svgmap = null;
 labmap.machines = [];
+labmap.working = true;
 
 function User(username, full_name, imageURL){
     var name = full_name.split(" ");
@@ -35,22 +36,32 @@ $(document).ready(function() {
     });
 });
 
-function reloadLabMapData(svg) {
+function reloadLabMapData() {
+    if(!labmap.working) return;
+    
     var machines = []
     var u = null;
     var m = null;
     $.getJSON('labmap.json', function(data) {
-        $.each(data, function(host, user) {
-            u = User(user.username, user.fullname, user.image);
-            m = Machine(host, u);
-            machines.push(m);
-        });
+        if(data.closed){
+            labmap.working = false;
+            jQuery.facebox('It seems the computing labs are closed right now. Please check back later.');
+        }else if(data.stopped){
+            labmap.working = false;
+            jQuery.facebox('It seems the labmap server isn\'t running right now. Please check back later.');
+        }else{
+            $.each(data, function(host, user) {
+                u = User(user.username, user.fullname, user.image);
+                m = Machine(host, u);
+                machines.push(m);
+            });
 
-        console.log(machines);
-        labmap.machines = machines; //Replace listing
-        updateTable();
-        updateMap();
-        setupListenersForMachines();
+            console.log(machines);
+            labmap.machines = machines; //Replace listing
+            updateTable();
+            updateMap();
+            setupListenersForMachines();
+        }
     });
 }
 
