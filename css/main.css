@@ -1,0 +1,108 @@
+body {
+  background-color: #ffffff;
+}
+
+sup{
+    font-size: 0.5em;
+}
+
+#container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  padding: 10px;
+  background-color: #008CBA;
+  color: #FFFFFF;
+  border-bottom: 2px solid #EEEEEE;
+  margin-bottom: 30px;
+}
+
+.center_content{
+    width:90%;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+#lab_map_container {
+  width: 650px;
+  height: 520px;
+  
+  float: left;
+  position: relative;
+}
+
+#lab_map{
+  width: 650px;
+  height: 520px;
+  margin: 5px 0 5px 0;
+  overflow: hidden;
+}
+
+#user_info{
+    position: absolute;
+    top: 288px;
+    left: 335px;
+    background-color: #EEE;
+    padding: 10px;
+    width: 288px;
+}
+
+#user_info td.label{
+    text-align: right;
+    font-weight: bold;
+}
+#user_info_image{
+    float: left;
+    width: 100px;
+    height: 133px;
+    margin-right: 5px;
+}
+
+#user_info_title{
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#user_list{
+    padding-left: 680px;
+    padding-bottom:20px;
+}
+
+#user_table{
+    width: 100%;
+    min-width: 250px;
+}
+
+#user_table tr.clickable:hover td{
+    background-color: #D1F1FF;
+}
+
+
+#user_table tr.clickable{
+    background-color: #D1F1FF;
+}
+
+#pager{
+    padding-left: 680px;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+footer {
+  padding: 10px;
+}
+
+h1 {
+  margin: 2px 2px 0 5px;
+}
+
+h2 {
+  margin: 0 2px 2px 5px;
+  font-size: 10pt;
+}
