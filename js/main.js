@@ -43,7 +43,7 @@ function reloadLabMapData() {
     var machines = []
     var u = null;
     var m = null;
-    $.getJSON('/~pc2210/labmap/labmap.json', function(data) {
+    $.getJSON('labmap.json', function(data) {
         if(data.closed){
             labmap.working = false;
             jQuery.facebox('Lab\'s closed, get some sleep. :)');
