@@ -32,6 +32,7 @@ $(document).ready(function() {
         onLoad: function(svg){
             console.log(svg);
             labmap.svgmap = svg;
+	    mapLoaded();
             reloadLabMapData();
             setInterval(function() { reloadLabMapData(); }, 10000);
         }
@@ -67,6 +68,8 @@ function updateMap(){
         }
     });
 }
+
+function mapLoaded() {}
 
 function mapUpdated() {}
 

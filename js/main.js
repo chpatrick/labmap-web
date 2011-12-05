@@ -1,3 +1,7 @@
+function mapLoaded() {
+  setupHandlers(labmap.svgmap.root());
+}
+
 function mapUpdated() {
     updateTable();
     setupListenersForMachines();
