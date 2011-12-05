@@ -48,7 +48,14 @@ function updateMap(){
 
         if(m.mapImage){
             if(m.user){
-                m.mapImage.setAttributeNS(xlink, 'href', m.user.imageURL);
+	        if (m.user.imageURL) {
+                  m.mapImage.setAttributeNS(xlink, 'href', m.user.imageURL);
+		}
+		else
+		{
+                  m.mapImage.setAttributeNS(xlink, 'href', '/images/nopic.jpg');
+		}
+
                 var title = m.mapElement.attr('title');
 
                 if (!title) {
