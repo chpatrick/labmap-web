@@ -39,8 +39,10 @@ header {
   float: left;
 }
 #projector_lab_map {
-  width:100%;
-  height:100100100100100100100100100100}
+  width: 100%;
+  height: 100%;
+  float: left;
+}
 
 #lab_map{
   height: 100%;
