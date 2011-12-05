@@ -27,23 +27,15 @@ header {
 
 .center_content{
     width:90%;
-    min-width: 1000px;
     margin: 0 auto;
 }
 
-#lab_map_container {
-  width: 60%;
-/*  min-height: 90%; */
-  
-  height: 90%;
-  float: left;
-}
-
 #lab_map{
-  height: 100%;
-  width: 100%;
-  margin: 5px 0 5px 0;
-  overflow: hidden;
+  width: 60%;
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  top: 100px;
 }
 
 /* svg { position:absolute; top:0; left:0; height:100%; width:100% } */
@@ -68,7 +60,10 @@ footer a:visited {
 }
 
 #user_info{
-  margin-top: 10px;
+  width: 40%;
+  position: absolute;
+  top: 100px;
+  right: 10px;
 }
 
 #user_info td.label{
@@ -90,14 +85,15 @@ footer a:visited {
 }
 
 #user_list{
-    width: 40%;
-    padding-bottom:20px;
-    float: right;
 }
 
-#user_table{
-    width: 100%;
-    min-width: 250px;
+#user_table_wrapper {
+    width: 40%;
+    position: absolute;
+    top: 280px;
+    right: 10px;
+    bottom: 30px;
+    overflow: auto;
 }
 
 #user_table tr.clickable:hover td{
@@ -107,9 +103,6 @@ footer a:visited {
 
 #user_table tr.clickable{
     background-color: #D1F1FF;
-}
-
-#pager{
 }
 
 .clickable{

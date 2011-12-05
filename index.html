@@ -33,14 +33,12 @@
         </header>
 
         <div id="main" role="main" class="center_content">
-            <div id="lab_map_container">
-                <div id="lab_map"></div>
-            </div>
+            <div id="lab_map"></div>
             <div id="user_list">
                 <div id="user_info">
                     <div id="user_info_title">User Info</div>
                     <div id="user_info_image_container">
-                        <image id="user_info_image" src="images/anon.png" />
+                        <image id="user_info_image" src="/images/nopic.jpg" />
                     </div>
                     <table>
                         <tr>
@@ -54,27 +52,27 @@
                         </tr>
                     </table>
                 </div>
-		<div style="overflow: auto; height: 700px; clear: both">
-                <table id="user_table" class="tablesorter"> 
-                    <thead> 
-                        <tr> 
-                            <th>Hostname</th> 
-                            <th>User name</th> 
-                            <th>Full name</th> 
-                        </tr> 
-                    </thead> 
-                    <tbody> 
-                        <tr> 
-                            <td>Loading...</td> 
-                        </tr> 
-                    </tbody> 
-                </table>  
+		<div id="user_table_wrapper">
+		  <table id="user_table" class="tablesorter"> 
+		      <thead> 
+			  <tr> 
+			      <th>Hostname</th> 
+			      <th>User name</th> 
+			      <th>Full name</th> 
+			  </tr> 
+		      </thead> 
+		      <tbody> 
+			  <tr> 
+			      <td>Loading...</td> 
+			  </tr> 
+		      </tbody> 
+		  </table>
 		</div>
             </div>
         </div>
 
         <footer>
-		by Patrick Chilton and Peter Hamilton :: <a href="https://github.com/vahokif/labmap-web">github</a> :: <a href="https://www.doc.ic.ac.uk/~pc2210/labmap/labmap.json">data feed</a> :: no guarantees, data should be accurate to a couple of minutes
+		by Patrick Chilton <a href="https://github.com/vahokif/labmap-web/network/members">et al</a> :: <a href="https://github.com/vahokif/labmap-web">github</a> :: <a href="https://www.doc.ic.ac.uk/~pc2210/labmap/labmap.json">data feed</a> :: accurate to a couple of minutes
         </footer>
     </div>
 
