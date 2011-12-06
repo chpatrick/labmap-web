@@ -28,11 +28,11 @@ function Machine(machine_name, user){
 $(document).ready(function() {
     $('#lab_map').svg({
         loadURL: "labmap.svg",
-	changeSize: true,
+        changeSize: true,
         onLoad: function(svg){
             console.log(svg);
             labmap.svgmap = svg;
-	    mapLoaded();
+            mapLoaded();
             reloadLabMapData();
             setInterval(function() { reloadLabMapData(); }, 10000);
         }
@@ -47,23 +47,24 @@ function updateMap(){
         m.mapElement = $('#' + m.machinename);
         m.mapImage = $(m.mapElement, labmap.svgmap.root()).get(0);
 
-        if(m.mapImage){
-            if(m.user){
-	        if (m.user.imageURL) {
+        if (m.mapImage) {
+            if (m.user) {
+                if (m.user.imageURL) {
                   m.mapImage.setAttributeNS(xlink, 'href', m.user.imageURL);
-		}
-		else
-		{
+                }
+                else
+                {
                   m.mapImage.setAttributeNS(xlink, 'href', '/images/nopic.jpg');
-		}
+                }
 
                 var title = m.mapElement.attr('title');
 
                 if (!title) {
                     m.mapElement.attr('title', m.machinename + ': ' + m.user.first_name + ' ' + m.user.last_name + ' (' + m.user.username + ')');
                 }
-            }else{
-                m.mapImage.hide();
+            }
+	    else {
+                m.mapImage.setAttributeNS(xlink, 'href', 'images/available.svg');
             }
         }
     });
@@ -88,14 +89,19 @@ function reloadLabMapData() {
             jQuery.facebox('Nothing to see here, move along.');
         }else{
             $.each(data, function(host, user) {
-                u = User(user.username, user.fullname, user.image);
+                if (user) {
+                  u = User(user.username, user.fullname, user.image);
+                }
+                else {
+                  u = null;
+                }
                 m = Machine(host, u);
                 machines.push(m);
             });
 
             labmap.machines = machines; //Replace listing
             updateMap();
-	    mapUpdated();
+            mapUpdated();
         }
     });
 }
