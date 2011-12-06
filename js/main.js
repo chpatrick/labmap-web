@@ -41,11 +41,13 @@ function setupListenersForMachines(){
         m.mapElement.click(function(){
             showUserDataForMachine(m);
         });
-        
-        m.tableRow.addClass('clickable');
-        m.tableRow.click(function(){
-            showUserDataForMachine(m);
-        });
+
+	if (m.tableRow) {        
+	    m.tableRow.addClass('clickable');
+	    m.tableRow.click(function(){
+		showUserDataForMachine(m);
+	    });
+	}
     });
 }
 
