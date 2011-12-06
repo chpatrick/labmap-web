@@ -1,5 +1,5 @@
 function mapLoaded() {
-  setupHandlers(labmap.svgmap.root());
+//  setupHandlers(labmap.svgmap.root());
 }
 
 function mapUpdated() {
@@ -14,10 +14,12 @@ function updateTable(){
     var newTBody = $(document.createElement('tbody'));
     
     $.each(labmap.machines, function(index, m){
-        m.tableRow = $(document.createElement('tr'));
-        m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.first_name + ' ' + m.user.last_name + '</td>');
+       if (m.user) {
+	    m.tableRow = $(document.createElement('tr'));
+	    m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.first_name + ' ' + m.user.last_name + '</td>');
 
-        newTBody.append(m.tableRow);
+	    newTBody.append(m.tableRow);
+	}
     });
     
     newT.append(newTHead).append(newTBody);
