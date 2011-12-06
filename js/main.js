@@ -14,7 +14,7 @@ function updateTable(){
     var newTBody = $(document.createElement('tbody'));
     
     $.each(labmap.machines, function(index, m){
-       if (m.user) {
+       if (m.user != "AVAILABLE" && m.user != "UNKNOWN") {
 	    m.tableRow = $(document.createElement('tr'));
 	    m.tableRow.append('<td>' + m.machinename + '</td><td>' + m.user.username + '</td><td>' + m.user.first_name + ' ' + m.user.last_name + '</td>');
 

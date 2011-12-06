@@ -48,7 +48,13 @@ function updateMap(){
         m.mapImage = $(m.mapElement, labmap.svgmap.root()).get(0);
 
         if (m.mapImage) {
-            if (m.user) {
+	    if (m.user == 'AVAILABLE') {
+                m.mapImage.setAttributeNS(xlink, 'href', 'images/available.svg');
+	    }
+	    else if (m.user == 'UNKNOWN') {
+                m.mapImage.setAttributeNS(xlink, 'href', 'images/unknown.svg');
+	    }
+            else {
                 if (m.user.imageURL) {
                   m.mapImage.setAttributeNS(xlink, 'href', m.user.imageURL);
                 }
@@ -62,9 +68,6 @@ function updateMap(){
                 if (!title) {
                     m.mapElement.attr('title', m.machinename + ': ' + m.user.first_name + ' ' + m.user.last_name + ' (' + m.user.username + ')');
                 }
-            }
-	    else {
-                m.mapImage.setAttributeNS(xlink, 'href', 'images/available.svg');
             }
         }
     });
@@ -89,11 +92,11 @@ function reloadLabMapData() {
             jQuery.facebox('Nothing to see here, move along.');
         }else{
             $.each(data, function(host, user) {
-                if (user) {
+                if (user == 'AVAILABLE' || user == 'UNKNOWN') {
+		  u = user;
+		}
+		else {
                   u = User(user.username, user.fullname, user.image);
-                }
-                else {
-                  u = null;
                 }
                 m = Machine(host, u);
                 machines.push(m);
