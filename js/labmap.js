@@ -4,14 +4,12 @@ labmap.svgmap = null;
 labmap.machines = [];
 labmap.working = true;
 
-function User(username, full_name, imageURL){
-    var name = full_name.split(" ");
-    
+function User(username, full_name, imageURL, lockiness){
     return {
         username : username,
-        first_name : name[0],
-        last_name : name[1],
-        imageURL : imageURL
+        fullname : full_name,
+        imageURL : imageURL,
+	lockiness : lockiness
     }
 }
 
@@ -63,10 +61,14 @@ function updateMap(){
                   m.mapImage.setAttributeNS(xlink, 'href', '/images/nopic.jpg');
                 }
 
+                if (m.user.lockiness) {
+		  m.mapElement.attr('opacity', 1 - m.user.lockiness * 0.7);
+		}
+
                 var title = m.mapElement.attr('title');
 
                 if (!title) {
-                    m.mapElement.attr('title', m.machinename + ': ' + m.user.first_name + ' ' + m.user.last_name + ' (' + m.user.username + ')');
+                    m.mapElement.attr('title', m.machinename + ': ' + m.user.fullname + ' (' + m.user.username + ')');
                 }
             }
         }
@@ -81,7 +83,6 @@ function reloadLabMapData() {
     if(!labmap.working) return;
     
     var machines = []
-    var u = null;
     var m = null;
     $.getJSON('labmap.json', function(data) {
         if(data.closed){
@@ -92,11 +93,12 @@ function reloadLabMapData() {
             jQuery.facebox('Nothing to see here, move along.');
         }else{
             $.each(data, function(host, user) {
+                var u = null
                 if (user == 'AVAILABLE' || user == 'UNKNOWN') {
 		  u = user;
 		}
 		else {
-                  u = User(user.username, user.fullname, user.image);
+                  u = User(user.username, user.fullname, user.image, user.lockiness);
                 }
                 m = Machine(host, u);
                 machines.push(m);

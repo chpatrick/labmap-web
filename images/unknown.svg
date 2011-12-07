@@ -21,7 +21,7 @@
     <linearGradient
        id="linearGradient3757">
       <stop
-         style="stop-color:#262626;stop-opacity:1;"
+         style="stop-color:#009a00;stop-opacity:1;"
          offset="0"
          id="stop3759" />
       <stop
@@ -46,9 +46,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="110.02729"
-     inkscape:cy="299.54332"
+     inkscape:zoom="0.5"
+     inkscape:cx="-493"
+     inkscape:cy="437.66087"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -82,18 +82,39 @@
        sodipodi:cy="118.21429"
        sodipodi:rx="124.28571"
        sodipodi:ry="131.07143"
-       d="m 229.28571,118.21429 a 124.28571,131.07143 0 1 1 -248.571423,0 a 124.28571,131.07143 0 1 1 248.571423,0 z"
+       d="m 229.28571,118.21429 c 0,72.38875 -55.64461,131.07142 -124.28571,131.07142 c -68.641104,0 -124.285713,-58.68267 -124.285713,-131.07142 C -19.285713,45.825537 36.358896,-12.85714 105,-12.85714 c 68.6411,0 124.28571,58.682677 124.28571,131.07143 z"
        transform="matrix(0.46596495,0,0,0.44184143,71.07368,840.13021)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4959"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4961"><rect
+           id="rect4963"
+           width="132"
+           height="142"
+           x="44"
+           y="62" /></flowRegion><flowPara
+         id="flowPara4965"></flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="78"
+       y="142"
+       id="text4967"
+       sodipodi:linespacing="125%"
+       transform="translate(0,732.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan4969"></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:122.22835541px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="91.443771"
-       y="937.72034"
-       id="text3805"
+       style="font-size:135.16116333px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       x="95.911217"
+       y="939.90308"
+       id="text4971"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3807"
-         x="91.443771"
-         y="937.72034">?</tspan></text>
+         id="tspan4973"
+         x="95.911217"
+         y="939.90308"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">?</tspan></text>
   </g>
 </svg>
