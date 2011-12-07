@@ -62,14 +62,18 @@ function updateMap(){
                 }
 
                 if (m.user.lockiness) {
-		  m.mapElement.attr('opacity', 1 - m.user.lockiness * 0.7);
+		  m.mapElement.attr('opacity', 1.56 - m.user.lockiness * 1.4);
 		}
 
-                var title = m.mapElement.attr('title');
+                var newTitle = $('<title>' + m.machinename + ': ' + m.user.fullname + ' (' + m.user.username + ')</title>');
+                var oldTitle = m.mapElement.children('title');
 
-                if (!title) {
-                    m.mapElement.attr('title', m.machinename + ': ' + m.user.fullname + ' (' + m.user.username + ')');
+                if (oldTitle.length == 0) {
+		    newTitle.appendTo(m.mapElement);
                 }
+		else {
+		    oldTitle.replaceWith(newTitle);
+		}
             }
         }
     });
